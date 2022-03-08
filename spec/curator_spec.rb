@@ -127,5 +127,7 @@ describe Curator do
     expect(@curator.artists_with_multiple_photographs).to eq(["Diane Arbus"])
   end
 
-
+  it "can determine photographs taken by artists from a given country" do
+    expect(@curator.photographs_taken_by_artist_from("United States")).to eq([@photo_2, @photo_3, @photo_4])
+  end
 end
