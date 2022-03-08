@@ -34,4 +34,12 @@ class Curator
     photographs_by_artist.find_all{|artist, works| list << artist if works.length > 1}
     list.map{|artist| artist.name}
   end
+
+  def photographs_taken_by_artist_from(country)
+    list = []
+    photographs_by_artist.find_all do
+      |artist, works| list << works if artist.country == country
+    end
+    list.flatten
+  end
 end
