@@ -129,5 +129,6 @@ describe Curator do
 
   it "can determine photographs taken by artists from a given country" do
     expect(@curator.photographs_taken_by_artist_from("United States")).to eq([@photo_2, @photo_3, @photo_4])
+    expect(@curator.photographs_taken_by_artist_from("Argentina")).to eq([])
   end
 end
