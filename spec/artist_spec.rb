@@ -42,4 +42,8 @@ describe Artist do
     expect(@artist.died).to eq("1984")
     expect(@artist.country).to eq("United States")
   end
+
+  it "can determine the artist age at death" do
+    expect(@artist.age_at_death).to eq(82)
+  end
 end
