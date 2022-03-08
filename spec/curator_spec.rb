@@ -107,21 +107,20 @@ describe Curator do
       died: "1971",
       country: "United States"
     })
-    curator.add_artist(artist_1)
-    curator.add_artist(artist_2)
-    curator.add_artist(artist_3)
-    curator.add_photograph(photo_1)
-    curator.add_photograph(photo_2)
-    curator.add_photograph(photo_3)
-    curator.add_photograph(photo_4)
+    @curator.add_artist(@artist_1)
+    @curator.add_artist(@artist_2)
+    @curator.add_artist(@artist_3)
+    @curator.add_photograph(@photo_1)
+    @curator.add_photograph(@photo_2)
+    @curator.add_photograph(@photo_3)
+    @curator.add_photograph(@photo_4)
   end
 
   it "can list photographs by artist" do
-    expect(curator.photographs_by_artist).to eq({
-      @artist_1: [@photo_1]
-      @artist_2: [@photo_2]
-      @artist_3: [@photo_3, @photo_4]
-      })
+    expect(@curator.photographs_by_artist).to eq({
+      @artist_1 => [@photo_1],
+      @artist_2 => [@photo_2],
+      @artist_3 => [@photo_3, @photo_4]})
   end
 
 
