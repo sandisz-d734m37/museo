@@ -1,3 +1,4 @@
+require 'pry'
 class Curator
   attr_reader :artists, :photographs
 
@@ -26,5 +27,11 @@ class Curator
       end
     end
   ph_by_ph
+  end
+
+  def artists_with_multiple_photographs
+    list = []
+    photographs_by_artist.find_all{|artist, works| list << artist if works.length > 1}
+    list.map{|artist| artist.name}
   end
 end
