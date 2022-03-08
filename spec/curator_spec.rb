@@ -123,5 +123,9 @@ describe Curator do
       @artist_3 => [@photo_3, @photo_4]})
   end
 
+  it "can determine which artists have multiple photographs" do
+    expect(@curator.artists_with_multiple_photographs).to eq(["Diane Arbus"])
+  end
+
 
 end
