@@ -40,6 +40,6 @@ describe Artist do
     expect(@artist.name).to eq("Ansel Adams")
     expect(@artist.born).to eq("1902")
     expect(@artist.died).to eq("1984")
-    expect(@artist.country).to eq("1984")
+    expect(@artist.country).to eq("United States")
   end
 end
