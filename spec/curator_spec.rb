@@ -25,7 +25,7 @@ describe Curator do
       country: "France"
     })
     @artist_2 = Artist.new({
-      id: "2",      
+      id: "2",
       name: "Ansel Adams",
       born: "1902",
       died: "1984",
@@ -50,5 +50,9 @@ describe Curator do
     @curator.add_artist(@artist_1)
     @curator.add_artist(@artist_2)
     expect(@curator.artists).to eq([@artist_1, @artist_2])
+  end
+
+  it "can find artist by id" do
+    expect(curator.find_artist_by_id("1")).to eq(@artist_1)
   end
 end
