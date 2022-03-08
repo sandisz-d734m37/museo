@@ -20,8 +20,8 @@ describe Curator do
   end
 
   it "exists and has readable attributes" do
-    expect(curator).to be_a(Curator)
-    expect(curator.photographs).to eq([])
-    expect(curator.artists).to eq([])
+    expect(@curator).to be_a(Curator)
+    expect(@curator.photographs).to eq([])
+    expect(@curator.artists).to eq([])
   end
 end
